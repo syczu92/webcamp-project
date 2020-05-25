@@ -1,0 +1,122 @@
+$breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$grid-columns: 12;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 10px;
+  color: #231F20;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1.5em;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: $breakpoint-sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: $breakpoint-md;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: $breakpoint-lg;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: $breakpoint-xl;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -1.5em;
+}
+
+%grid-column {
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+}
+
+@each $key, $value in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    .col-#{$key}-#{$i}, .col-#{$i} {
+      @extend %grid-column;
+    }
+  }
+}
+
+
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: calc(100% * (#{$i} / 12));
+  }
+}
+
+
+@media (min-width: $breakpoint-sm) {
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+
+.banner-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F9F9;
+  text-decoration: none;
+  width: 100%;
+  min-height: 250px;
+
+  p {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #231F20;
+  }
+}
