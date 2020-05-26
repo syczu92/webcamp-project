@@ -5,6 +5,55 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $grid-columns: 12;
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -17,6 +66,79 @@ body {
   color: #231F20;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 1em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: 2.5em;
+}
+
+h2, .h2 {
+  font-size: 2em;
+}
+
+h3, .h3 {
+  font-size: 1.75em;
+}
+
+h4, .h4 {
+  font-size: 1.5em;
+}
+
+h5, .h5 {
+  font-size: 1.25em;
+}
+
+h6, .h6 {
+  font-size: 1em;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #231F20;
+  padding: 1em 2.5em;
+  font-size: 1.3em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: $breakpoint-md) {
+  .d-md-none {
+    display: none;
+  }
 }
 
 .container {
@@ -104,19 +226,136 @@ body {
   }
 }
 
-.banner-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #F9F9F9;
-  text-decoration: none;
-  width: 100%;
-  min-height: 250px;
+.banner {
+  background-color: #fff;
+  padding: 2.5em;
 
-  p {
-    text-transform: uppercase;
-    font-size: 1.3em;
-    font-weight: 600;
-    color: #231F20;
+  .banner__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F9F9;
+    text-decoration: none;
+    width: 100%;
+    min-height: 250px;
+  
+    p {
+      text-transform: uppercase;
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #231F20;
+    }
   }
+}
+
+.newsletter {
+  background-color: #F5F5F5;
+  padding: 4em 0;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    span {
+      font-size: 2em;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+.footer-menu {
+  background-color: #231F20;
+  padding: 4em 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__header {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+  }
+  &__list {
+    li {
+      margin-bottom: 1em;
+      font-size: 1.3em;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer-contact {
+  background-color: #fff;
+  &__list {
+    display: none;
+    padding: 2.5em 0
+  }
+  &__logo {
+    text-align: center;
+    padding: 2.5em 0
+  }
+  &__logos {
+    display: none;
+  }
+}
+
+
+@media (min-width: $breakpoint-sm) {
+
+}
+
+
+@media (min-width: $breakpoint-md) {
+  .footer-contact {
+    &__list {
+      display: block;
+      ul {
+        font-size: 1.3em;
+        li {
+          display: inline-block;
+          margin-right: 1em;
+          a {
+            color: #393938;
+          }
+          .social-media {
+            color: #3A559F;
+          }
+        }
+      }
+      i {
+        font-size: 1.3em;
+      }
+    }
+    &__logo {
+      text-align: right;
+    }
+    &__logos {
+      display: block;
+      padding: 2em 0;
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  
+}
+
+@media (min-width: $breakpoint-xl) {
+
 }
