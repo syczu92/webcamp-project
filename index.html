@@ -4,14 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/fontello.css">
     <link rel="stylesheet" href="dist/css/slick.css">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
     <header>
-        <nav></nav>
+        <div class="top-bar">
+            <a href="#" class="top-bar__link">-20% na całą kolekcję zimową! ></a>
+        </div>
+        <div class="bottom-bar">
+            <a href="#" class="bottom-bar__link"><i class="icon-truck bottom-bar__icon"></i>Darmowa dostawa</a>
+            <a href="#" class="bottom-bar__link"><i class="icon-return bottom-bar__icon"></i>30 dni na zwrot</a>
+            <a href="#" class="bottom-bar__link"><i class="icon-sale bottom-bar__icon"></i>-10% na pierwsze zakupy</a>
+        </div>
+        <nav>
+            <div class="menu">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="menu__logo">
+                            <a href="#" class="menu__logo-link">
+                                <img src="dist/img/logo.png" alt="logo" class="menu__logo-image">
+                            </a>
+                        </div>
+                        <div class="menu__search">
+                            <input class="menu__search-form" type="text" placeholder="Wpisz czego szukasz...">
+                            <button type="submit" class="menu__search-submit"><i class="icon-search menu__search-icon" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="menu__settings">
+                            <a href="" class="menu__settings-link menu__settings-link--hide">
+                                <i class="icon-phone menu__settings-icon"></i>
+                            </a>
+                            <a href="" class="menu__settings-link menu__settings-link--hide">
+                                <i class="icon-user menu__settings-icon"></i>
+                            </a>
+                            <a href="" class="menu__settings-link">
+                                <i class="icon-heart menu__settings-icon"></i>
+                            </a>
+                            <a href="" class="menu__settings-link menu__settings-link--basket">
+                                <i class="icon-bag menu__settings-icon"></i>
+                                <span>Koszyk<br><strong>225,00 zł</strong></span>
+                            </a>
+                            <a href="" class="menu__settings-link menu__settings-link--hide">
+                                <img src="dist/img/lang.png" alt="language" class="menu__settings-lang">
+                            </a>
+                        </div>
+                        <a href="#" class="menu__mobile">
+                            <i class="icon-menu menu__mobile-icon"></i>
+                        </a>
+                    </div>
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Damskie</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Męskie</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Torebki</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Akcesoria</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Premium</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Marki</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">Nowości</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link menu__list-link--hot">Wyprzedaż</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="main-slider">
@@ -45,7 +116,6 @@
                   </div>
             </div>
         </div>
-        <!-- OTHER SECTIONS -->
         <div class="banner">
             <div class="container">
                 <div class="row">
@@ -82,10 +152,52 @@
                 </div>
             </div>
         </div>
-        <!-- OTHER SECTIONS -->
+        <div class="product-slider">
+            <div class="container">
+                <h2 class="product-slider__heading">Wybrane dla ciebie</h2>
+                <ul class="product-slider__list">
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_1.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_2.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_3.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_4.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_5.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                    <li class="product-slider__item">
+                        <a href="#"><img class="product-slider__item-image" src="/dist/img/products/product_6.png" alt="product image"></a>
+                        <h4 class="product-slider__item-name">Botki karino</h4>
+                        <span class="product-slider__item-code">3019/076-f czarny</span>
+                        <p class="product-slider__item-price">289,00 zł</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="social-media">
             <div class="container">
-                <h2 class="social-media__header">@armodo - sprawdź co nowego</h2>
+                <h2 class="social-media__heading">@armodo - sprawdź co nowego</h2>
                 <a class="social-media__icon" href="#"><i class="icon-facebook-squared"></i></a>
                 <a class="social-media__icon"  href="#"><i class="icon-instagram"></i></a>
                 <div class="social-media__slider">
@@ -103,7 +215,7 @@
         </div>
         <div class="advantages">
             <div class="container">
-                <h2 class="advantages__header">dlaczego warto kupować w armodo</h2>
+                <h2 class="advantages__heading">dlaczego warto kupować w armodo</h2>
                 <div class="row">
                     <div class="col-md-3 col-6">
                         <a class="advantages__item" href="#">
@@ -159,7 +271,7 @@
                 <div class="row">
                     <div class="col-md-3 col-12">
                         <div class="footer-menu__content">
-                            <h4 class="footer-menu__header">Moje zamówienie</h4>
+                            <h4 class="footer-menu__heading">Moje zamówienie</h4>
                             <ul class="footer-menu__list">
                                 <li><a href="#">Status zamówienia</a></li>
                                 <li><a href="#">Śledzenie przesyłki</a></li>
@@ -171,7 +283,7 @@
                     </div>
                     <div class="col-md-3 col-12">
                         <div class="footer-menu__content">
-                            <h4 class="footer-menu__header">Moje konto</h4>
+                            <h4 class="footer-menu__heading">Moje konto</h4>
                             <ul class="footer-menu__list">
                                 <li><a href="#">Zarejestruj się</a></li>
                                 <li><a href="#">Moje zamówienia</a></li>
@@ -185,7 +297,7 @@
                     </div>
                     <div class="col-md-3 col-12">
                         <div class="footer-menu__content">
-                            <h4 class="footer-menu__header">Regulaminy</h4>
+                            <h4 class="footer-menu__heading">Regulaminy</h4>
                             <ul class="footer-menu__list">
                                 <li><a href="#">Informacje o sklepie</a></li>
                                 <li><a href="#">Wysyłka</a></li>
@@ -198,7 +310,7 @@
                     </div>
                     <div class="col-md-3 col-12">
                         <div class="footer-menu__content">
-                            <h4 class="footer-menu__header">Więcej</h4>
+                            <h4 class="footer-menu__heading">Więcej</h4>
                             <ul class="footer-menu__list">
                                 <li><a href="#">O nas</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -217,7 +329,7 @@
                 <div class="row">
                     <div class="col-md-8 footer-contact__list">
                         <ul>
-                            <li><a href="tel:+48786818322"><i class="icon-phone-1"></i> +48 786818322</a></li>
+                            <li><a href="tel:+48786818322"><i class="icon-phone"></i> +48 786818322</a></li>
                             <li><a href="mailto:info@armodo.com"><i class="icon-mail-alt"></i> info@armodo.com</a></li>
                             <li><a href="#" class="facebook"><i class="icon-facebook-squared"></i> Odwiedź nas na facebooku ></a></li>
                         </ul>

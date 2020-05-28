@@ -4,7 +4,7 @@ $(window).resize(function() {
     
   } else {
     $('.footer-menu__list').toggle(false);
-    $('.footer-menu__header').click(function() {
+    $('.footer-menu__heading').click(function() {
         $(this).next().toggle();
       });
   }
@@ -46,6 +46,23 @@ $('.social-media__slider').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.product-slider__list').slick({
+  dots: false,
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        arrows: false,
       }
     }
   ]
